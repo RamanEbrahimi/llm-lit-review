@@ -8,35 +8,21 @@ A comprehensive collection of AI tools and educational tutorials for literature 
 - [Components](#components)
 - [Installation](#installation)
 - [Literature Review System](#literature-review-system)
-- [LLM Training Tutorial](#llm-training-tutorial)
-- [AI Agent Tutorial](#ai-agent-tutorial)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 
 ## 🎯 Overview
 
-This project provides three main components:
+This project provides a literature review system that can be used to analyze PDF papers and generate literature reviews.
 
-1. **Literature Review System** (`lit_review.py`) - Automated PDF analysis and literature review generation
-2. **LLM Training Tutorial** (`llm_training_tutorial.py`) - Educational guide for training language models from scratch
-3. **AI Agent Tutorial** (`agent_from_scratch.py`) - Comprehensive tutorial on building AI agents
+**Literature Review System** (`lit_review.py`) - Automated PDF analysis and literature review generation
 
 ## 🧩 Components
 
-### 1. Literature Review System (`lit_review.py`)
+### Literature Review System (`lit_review.py`)
 - **Purpose**: Automatically analyze PDF papers and generate comprehensive literature reviews
 - **Features**: PDF text extraction, knowledge graph construction, concept analysis, automated summarization
 - **Output**: Structured literature review in Markdown format
-
-### 2. LLM Training Tutorial (`llm_training_tutorial.py`)
-- **Purpose**: Educational guide for understanding and training language models
-- **Features**: Transformer architecture implementation, tokenization, training loops, text generation
-- **Learning**: Complete pipeline from scratch to working LLM
-
-### 3. AI Agent Tutorial (`agent_from_scratch.py`)
-- **Purpose**: Tutorial on building AI agents with different planning and learning algorithms
-- **Features**: Perceive-Plan-Act loop, Q-Learning, pathfinding algorithms, multi-agent systems
-- **Learning**: Core AI agent concepts and implementation
 
 ## 🚀 Installation
 
@@ -69,16 +55,6 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements_lit_review.txt
 python -m spacy download en_core_web_sm
-```
-
-#### For LLM Training Tutorial:
-```bash
-pip install -r requirements.txt
-```
-
-#### For AI Agent Tutorial:
-```bash
-pip install -r requirements.txt
 ```
 
 ### Step 4: Verify Installation
@@ -205,293 +181,6 @@ ls -la *.md *.json
 # - knowledge_graph.png (visualization)
 ```
 
-## 🧠 LLM Training Tutorial
-
-### Overview
-The LLM training tutorial provides a complete educational experience for understanding and implementing language models from scratch. It covers transformer architecture, tokenization, training, and text generation.
-
-### Learning Objectives
-- Understand transformer architecture components
-- Implement multi-head attention mechanisms
-- Build complete training pipeline
-- Generate text with trained models
-- Visualize training progress
-
-### Architecture Components
-
-1. **Multi-Head Attention**
-   - Query, Key, Value transformations
-   - Scaled dot-product attention
-   - Multi-head mechanism
-
-2. **Positional Encoding**
-   - Sinusoidal positional embeddings
-   - Position information injection
-
-3. **Transformer Blocks**
-   - Self-attention layers
-   - Feed-forward networks
-   - Layer normalization
-
-4. **Complete Model**
-   - Embedding layers
-   - Multiple transformer blocks
-   - Output projection
-
-### Usage
-
-#### Basic Tutorial Run
-```bash
-python llm_training_tutorial.py
-```
-
-#### Custom Training Parameters
-```bash
-# The tutorial includes interactive parameter setting
-# You can modify the main() function to change:
-# - Model size (vocab_size, d_model, n_heads, n_layers)
-# - Training parameters (epochs, batch_size, learning_rate)
-# - Data generation (num_samples, max_length)
-```
-
-### Example Training Session
-
-```bash
-$ python llm_training_tutorial.py
-
-=== LLM Training Tutorial ===
-Creating synthetic training data...
-Vocabulary size: 1000
-Training samples: 1000
-Max sequence length: 50
-
-Initializing model...
-Model parameters: 1,234,567
-
-Starting training...
-Epoch 1/10: Loss: 8.234
-Epoch 2/10: Loss: 7.891
-...
-Epoch 10/10: Loss: 6.123
-
-Training complete! Generating sample text...
-Generated text: "The quick brown fox jumps over the lazy dog..."
-
-Saving model to 'trained_llm.pth'
-```
-
-### Key Learning Concepts
-
-1. **Tokenization**
-   - Converting text to numerical tokens
-   - Vocabulary management
-   - Sequence padding
-
-2. **Attention Mechanism**
-   - Query-Key-Value paradigm
-   - Attention weights calculation
-   - Multi-head implementation
-
-3. **Training Process**
-   - Loss calculation (cross-entropy)
-   - Backpropagation
-   - Gradient descent optimization
-
-4. **Text Generation**
-   - Autoregressive generation
-   - Temperature sampling
-   - Sequence completion
-
-## 🤖 AI Agent Tutorial
-
-### Overview
-The AI agent tutorial teaches fundamental concepts of artificial intelligence agents through hands-on implementation. It covers perception, planning, action, and learning mechanisms.
-
-### Learning Objectives
-- Understand Perceive-Plan-Act loop
-- Implement different planning algorithms
-- Build learning agents with Q-Learning
-- Create multi-agent systems
-- Visualize agent behavior
-
-### Core Concepts
-
-1. **Agent Architecture**
-   - State representation
-   - Action space definition
-   - Perception mechanisms
-   - Memory systems
-
-2. **Planning Algorithms**
-   - Random planning
-   - Greedy planning
-   - A* pathfinding
-   - Dynamic programming
-
-3. **Learning Mechanisms**
-   - Q-Learning implementation
-   - Exploration vs exploitation
-   - Reward shaping
-   - Policy optimization
-
-4. **Environment Design**
-   - Grid world simulation
-   - Multi-agent environments
-   - Obstacle avoidance
-   - Goal-oriented behavior
-
-### Usage
-
-#### Interactive Tutorial Mode
-```bash
-python agent_from_scratch.py
-```
-
-#### Specific Demonstrations
-```bash
-# The script includes multiple demonstration functions:
-# - demonstrate_basic_agent()
-# - demonstrate_learning_agent()
-# - demonstrate_planning_algorithms()
-# - demonstrate_multi_agent_system()
-```
-
-### Example Agent Session
-
-```bash
-$ python agent_from_scratch.py
-
-=== AI Agent Tutorial ===
-
-1. Basic Agent Demonstration
-Agent starting position: (0, 0)
-Goal position: (9, 9)
-Agent path: [(0,0), (1,1), (2,2), ..., (9,9)]
-Steps taken: 18
-
-2. Learning Agent Demonstration
-Training Q-Learning agent...
-Episode 1: Steps: 45, Reward: -45
-Episode 100: Steps: 18, Reward: -18
-Episode 1000: Steps: 9, Reward: -9
-
-3. Planning Algorithm Comparison
-Random Planner: 45 steps
-Greedy Planner: 18 steps
-A* Planner: 9 steps
-
-4. Multi-Agent System
-Agent 1 path: [(0,0), (1,1), ..., (4,4)]
-Agent 2 path: [(9,9), (8,8), ..., (5,5)]
-Collision avoided at step 5
-```
-
-### Key Learning Outcomes
-
-1. **Agent Fundamentals**
-   - State space representation
-   - Action selection strategies
-   - Environment interaction
-
-2. **Planning Techniques**
-   - Search algorithms
-   - Heuristic functions
-   - Optimal pathfinding
-
-3. **Machine Learning Integration**
-   - Reinforcement learning
-   - Value function approximation
-   - Policy improvement
-
-4. **Multi-Agent Systems**
-   - Coordination mechanisms
-   - Conflict resolution
-   - Emergent behavior
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-#### Literature Review System
-
-**Issue**: "No module named 'spacy'"
-```bash
-# Solution: Install spaCy and download model
-pip install spacy
-python -m spacy download en_core_web_sm
-```
-
-**Issue**: "PyMuPDF not found"
-```bash
-# Solution: Install PyMuPDF
-pip install PyMuPDF
-```
-
-**Issue**: PDF text extraction fails
-```bash
-# Solution: Check PDF format and try alternative extraction
-# The system automatically falls back to PyPDF2 if PyMuPDF fails
-```
-
-#### LLM Training Tutorial
-
-**Issue**: CUDA out of memory
-```bash
-# Solution: Reduce model size or batch size
-# Modify parameters in main() function:
-# - Reduce d_model, n_heads, n_layers
-# - Reduce batch_size
-```
-
-**Issue**: Training loss not decreasing
-```bash
-# Solution: Adjust learning rate and training parameters
-# - Increase learning_rate
-# - Increase num_epochs
-# - Check data quality
-```
-
-#### AI Agent Tutorial
-
-**Issue**: Agent stuck in infinite loop
-```bash
-# Solution: Check environment boundaries and goal conditions
-# - Verify goal position is reachable
-# - Check obstacle placement
-# - Ensure proper termination conditions
-```
-
-**Issue**: Q-Learning not converging
-```bash
-# Solution: Adjust learning parameters
-# - Increase learning_rate
-# - Adjust exploration rate (epsilon)
-# - Increase training episodes
-```
-
-### Performance Optimization
-
-#### For Large Paper Collections
-```bash
-# Use GPU acceleration for embeddings
-export CUDA_VISIBLE_DEVICES=0
-
-# Increase chunk size for better processing
-# Modify chunk_size in TextChunker class
-
-# Use batch processing for embeddings
-# Modify batch_size in EmbeddingManager
-```
-
-#### For Faster Training
-```bash
-# Use smaller model for experimentation
-# Reduce vocab_size, d_model in LLM tutorial
-
-# Use simplified environment for agent testing
-# Reduce grid size in agent tutorial
-```
-
 ## 📊 Example Workflows
 
 ### Complete Literature Review Workflow
@@ -515,22 +204,6 @@ cat research_review.md
 open analysis_report.json
 ```
 
-### Educational Learning Workflow
-
-```bash
-# 1. Start with LLM tutorial
-python llm_training_tutorial.py
-# Learn about transformer architecture and training
-
-# 2. Move to agent tutorial
-python agent_from_scratch.py
-# Learn about AI agents and planning
-
-# 3. Apply knowledge to literature review
-python lit_review.py
-# See how AI techniques are applied in practice
-```
-
 ## 🤝 Contributing
 
 ### Development Setup
@@ -545,11 +218,6 @@ source dev_env/bin/activate
 
 # Install development dependencies
 pip install -r requirements_lit_review.txt
-pip install -r requirements.txt
-pip install pytest black flake8
-
-# Run tests
-pytest tests/
 ```
 
 ### Code Style
